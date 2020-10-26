@@ -1,4 +1,3 @@
-package tw3;
 import java.util.Scanner;
 
 class Rectangle{

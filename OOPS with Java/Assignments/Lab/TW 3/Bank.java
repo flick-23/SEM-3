@@ -67,9 +67,9 @@ class myBankAccount{
 }
 public class Bank{
     public static void main(String[] args){
-        myBankAccount a1= new myBankAccount("SB","Akhilesh","R C Nagar Belagavi",17596.51);
-        myBankAccount a2= new myBankAccount("FD","Rahul","Mandoli Road Belagavi",25987.69);
-        myBankAccount a3= new myBankAccount("RD","Sanyukta","Bhagyanagar Belagavi",15340.96);
+        myBankAccount a1= new myBankAccount("SB","Venkatesh","Bhagyanagar Belagavi",348732.00);
+        myBankAccount a2= new myBankAccount("FD","Rohit","Samrudhi ColonyBelagavi",254321.00);
+        myBankAccount a3= new myBankAccount("RD","Ajay","Bhagyanagar Belagavi",2354234.00);
 
         System.out.println(String.format("%-10s|%-10s|%5s|%-6s","Name","AccNumber","Type","Balance"));
         a1.dispDetails();

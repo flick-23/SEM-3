@@ -41,9 +41,9 @@ int main()
 
     int *x;     // x is going to be an array. Learn more in  Array names as pointer section
     
-    int y[2][2]={{10,20},{30,40}}   // pointers in MULTIDIMENSIONAL arrays 
+    int y[2][2]={{10,20},{30,40}};   // pointers in MULTIDIMENSIONAL arrays 
 
-    printf("\nThe address of a : %p",p1);       // %p is used to display pointers (instead of % d)
+    printf("\nThe address of a : %p", p1);       // %p is used to display pointers (instead of % d)
     printf("\nThe address of b : %p",&b);       // Direct approach of printing the address
     printf("\nThe address of c : %p",p3);      
     printf("\nThe value at address of a : %d",*p1); 
@@ -124,7 +124,7 @@ int main()
             *(*(nums + 1) + 1)	nums[1][1]	    26
             *(*(nums + 1) + 2)	nums[1][2]	    27
      */
-    
+
 
 }
 

@@ -1,6 +1,0 @@
-CO => Unit 1
-DS => Unit 1, Unit 2, Unit 3
-D.E =>Unit 1, Unit 2, Unit 3
-Math =>Unit 1, Unit 7
-OOPS => Unit 1, Unit 2 , Unit 3
-Web => Basic HTML, CSS, JS

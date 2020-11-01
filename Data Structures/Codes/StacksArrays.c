@@ -18,7 +18,6 @@ void push(struct Stack *s)
     }
     else
     {
-        printf("\nEnter the item to be added :");
         scanf("%d",&s->a[++s->top]);
         printf("\nItem added to the stack!");
     }
@@ -71,6 +70,7 @@ int main()
         {
         case 1:
             push(s);
+            printf("\nEnter the item to be added :");
         break;
 
         case 2:

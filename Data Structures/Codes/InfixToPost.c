@@ -30,6 +30,7 @@ char pop(struct Stack* s)
 void push(struct Stack* s, char op) 
 { 
 	s->a[++s->top] = op; 
+	printf("\nAdded in stack : %c",s->a[s->top]);
 } 
 
 
@@ -69,7 +70,7 @@ int Prec(char ch)
 // to postfix expression. 
 int infixToPostfix(char* exp) 
 { 
-	int i, k; 
+	int i, k, l=strlen(exp); 
 
 	// Create a stack of capacity 
 	// equal to expression size 
@@ -81,14 +82,17 @@ int infixToPostfix(char* exp)
 	s->a = (int*) malloc(s->capacity * sizeof(int)); 
 	if(!s) // See if stack was created successfully 
 		return -1 ; 
-
-	for (i = 0, k = -1; exp[i]; ++i) 
+	
+	for (i = 0, k = -1; i<l; ++i) 
 	{ 
+		printf("\n\nI : %d",i);
 		
 		// If the scanned character is  an operand, add it to output. 
 		if (isOperand(exp[i])) 
+		{
 			exp[++k] = exp[i]; 
-		
+			printf("\nOUTPUT : %c",exp[k]);
+		}
 		// If the scanned character is an  ‘(‘, push it to the stack. 
 		else if (exp[i] == '(') 
 			push(s, exp[i]); 
@@ -97,26 +101,36 @@ int infixToPostfix(char* exp)
 		else if (exp[i] == ')') 
 		{ 
 			while (!isEmpty(s) && peek(s) != '(') 
+			{
 				exp[++k] = pop(s); 
+				printf("\nOUTPUT BY POPPING : ( %c",exp[k]);
+			}
 			if (!isEmpty(s) && peek(s) != '(') 
 				return -1;  // invalid expression			 
 			else
+			{
 				pop(s); 
+				printf("\nOUTPUT BY POPPING : ) %c",exp[k]);
+			}
 		} 
 		else // an operator is encountered 
 		{ 
-			while (!isEmpty(s) && 
-				Prec(exp[i]) <= Prec(peek(s))) 
+			while (!isEmpty(s) && Prec(exp[i]) <= Prec(peek(s))) 
+			{
 				exp[++k] = pop(s); 
+				printf("\nOUTPUT BY POPPING : OP %c",exp[k]);
+			}
 			push(s, exp[i]); 
 		} 
 
 	} 
-
+	printf("\n\nOutside the for");
 	// pop all the operators from the stack 
 	while (!isEmpty(s)) 
+	{
 		exp[++k] = pop(s ); 
-
+		printf("\nOUTPUT : %c",exp[k]);
+	}
 	exp[++k] = '\0'; 
 	printf( "\n%s\n", exp ); 
 } 

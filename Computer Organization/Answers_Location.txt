@@ -1,0 +1,7 @@
+1) Functional Unit -> CN - 7
+2) Basic Operational Concepts -> U1U2 - 2
+3) single bus structure -> U1U2 - 4
+4) Performance ->U1U2 -5
+5) Connection bw Processor and Memory -> U1U2 - 3
+6) Byte Addressibility, Little and Big endian -> (U1U2 - 10) OR (CN - 21) 
+7) Addressing mode and its types ->PPT -72

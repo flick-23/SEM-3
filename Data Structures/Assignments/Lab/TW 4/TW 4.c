@@ -1,11 +1,9 @@
 //Termwork 4
-
-#include <iostream>
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #define MAX_SIZE 5
-
+ 
 
 struct msgq
 {

@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
 	initq(&mq);
 	while(1)
 	{
-		printf("\nSelect your Role: \n 1: Sender\n 2: Receiver\n 3: Exit :");
+		printf("\nSelect your Role: \n 1: Sender\n 2: Receiver\n 3: Exit \n");
 		scanf("%d",&role);
 	    if(role==1)//sender
 		{

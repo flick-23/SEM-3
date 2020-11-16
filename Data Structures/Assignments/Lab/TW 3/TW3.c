@@ -1,3 +1,4 @@
+// use the command -lm at eol to execute
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>

@@ -1,0 +1,5 @@
+Math - 1 , 4, 5 , 2 (going on)
+DS - 1,2 ( linked lists going on),3
+DE - 1,2,3,4 (going on)
+Java - 1,2,3,
+CO - 1,2,3,

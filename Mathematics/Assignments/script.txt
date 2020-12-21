@@ -1,0 +1,13 @@
+What is discrete math!?
+Discrete mathematics is mathematics that deals with discrete objects.Discrete  objects are those which are separated from each other. Integers , rational numbers , automobiles , houses , people etc are all discrete objects.
+
+Theoretical computer science
+Theoretical computer science also includes the study of various continuous computational objects.
+
+Information theory involves the qualification of information. Closely related is coding theory which is used to design efficient and reliable data transmission and storage methods . Here is a simple circle of continuous topics.
+
+Mathematical Logic
+Logic is the study of the principles of valid reasoning and inference.
+The study of mathematical proof is particularly important in logic , and has applications to automated theorem proving and formal verification of software.
+
+

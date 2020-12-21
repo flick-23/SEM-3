@@ -1,0 +1,10 @@
+What is number system ?
+. Decimal number system has base 10 as it uses 10 digits from 0 to 9. In decimal number system, the successive positions to the left of the decimal point represent units, tens, hundreds, thousands and so on.
+
+=> OCTAL : The octal numeral system, or oct for short, is the base-8 number system, and uses the digits 0 to 7. 
+
+=>Binary : 
+Binary number system, in mathematics, positional numeral system employing 2 as the base and so requiring only two different symbols for its digits, 0 and 1
+
+=>Hexadecimal : 
+The word “Hexadecimal” means sixteen because this type of digital numbering system uses 16 different digits from 0-to-9, and A-to-F.

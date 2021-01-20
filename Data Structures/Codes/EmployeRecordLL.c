@@ -78,8 +78,7 @@ void deleteRear(struct list *a){
         printf("\nEMPTY!");
         return;
     }
-    if(a-> == 1){
-        printf("\nI AM HERE");
+    if(a->head->next == NULL){
         deleteFront(a);
         return;
     }

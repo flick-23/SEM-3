@@ -68,7 +68,7 @@ int main(){
     int choice=-1,data,i=-1;
     printf("\nEnter root node :");
     scanf("%d",&data);
-    root = insert(root,7);
+    root = insert(root,data);
     preOrderTraversal(root);
 
     while(choice != 0){

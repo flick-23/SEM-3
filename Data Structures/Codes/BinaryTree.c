@@ -1,3 +1,4 @@
+#include<math.h>
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -39,6 +40,37 @@ struct node* search(struct node* node,int key){
     
 }
 
+int min(struct node *root){
+    int mini,left,right;
+    if(root != NULL)
+    {
+        left = min(root->left);
+        right = min(root->right);
+        if(left < right)
+            mini = left;
+        else
+            mini = right;
+        if(mini > root->key)
+            mini = root->key;
+    }
+    return mini;
+}
+
+int max(struct node *root){
+    if(root == NULL)
+        return-1;
+    int maxi;
+    int left = max(root->left);
+    int right = max(root->right);
+    if(left > right)
+        maxi = left;
+    else
+        maxi = right;
+    if(maxi < root->key)
+        maxi = root->key;
+    return maxi;
+}
+
 void preOrderTraversal(struct node* root){  // ROOT->left->right
     if (root == NULL)
         return;
@@ -73,7 +105,7 @@ int main(){
 
     while(choice != 0){
         i=-1;
-        printf("\n1.Insert\t2.Preorder Traversal\t3.Inorder Traversal\t4.Postorder Traversal\t0.EXIT\n");
+        printf("\n1.Insert\t2.Preorder Traversal\t3.Inorder Traversal\t4.Postorder Traversal\n5.Minimum\t6.Maximum\t0.EXIT\n");
         scanf("%d",&choice);
         switch (choice)
         {
@@ -87,6 +119,10 @@ int main(){
         case 3: inOrderTraversal(root);
         break;
         case 4: postOrderTraversal(root);
+        break;
+        case 5: printf("The minimum value is : %d",min(root));
+        break;
+        case 6: printf("The maximum value is : %d",max(root));
         break;
         case 0:
             printf("Thank you for using, kindly fuck off!\n");

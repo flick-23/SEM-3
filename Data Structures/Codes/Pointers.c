@@ -68,8 +68,8 @@ int main()
     //=================================================Function returning pointers=====================================
     printf("\nFunctions returning pointers\n");
     //B will now have address of C
-    printf("\nOld address of B : %p",p2);
-    printf("\nOld Value of B : %p",p2);
+    printf("\nOld address of B : %d",p2);
+    printf("\nOld Value of B : %d",p2);
 
     p2 = swapAddress(&c);       // passing address of c and recieving the value of c
 

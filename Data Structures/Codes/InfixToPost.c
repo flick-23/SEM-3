@@ -105,11 +105,11 @@ int infixToPostfix(char* exp)
 				exp[++k] = pop(s); 
 				printf("\nOUTPUT BY POPPING : ( %c",exp[k]);
 			}
-			if (!isEmpty(s) && peek(s) != '(') 
+			if (!isEmpty(s) && peek(s) != '(') 	//checks if opening bracket is present in the exp
 				return -1;  // invalid expression			 
 			else
 			{
-				pop(s); 
+				pop(s); 	//popping the opening bracket
 				printf("\nOUTPUT BY POPPING : ) %c",exp[k]);
 			}
 		} 

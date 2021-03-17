@@ -117,7 +117,6 @@ void deleteAtEnd(struct node **head)
     free(temp);
 }
 
-
 void deleteAtPosition(struct node **head_ref, int position)
 {
     // If linked list is empty 

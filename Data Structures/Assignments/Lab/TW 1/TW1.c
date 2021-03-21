@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include<string.h>
-
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char* argv[]) 
 {
 	FILE *f1,*f2,*f3;
@@ -26,28 +24,20 @@ int main(int argc, char* argv[])
 	{
 		if((strcmp(usn1,usn2)) < 0)	//IF USN2 > USN1
 		{
-			fprintf(f3,"\n%s\n",usn1);	//PUT USN1 IN FILE 3
-			
-			fprintf(f3,"\n%s\n",usn2);	//PUT USN2 IN FILE 3
-			
+			fprintf(f3,"\n%s\n",usn1);		
+			fgets(usn1, maxchar, f1);
 		}
 		else
 		{
 			fprintf(f3,"\n%s\n",usn2);	//PUT USN2 IN FILE 3
-			
-			fprintf(f3,"\n%s\n",usn1);	//PUT USN1 IN FILE 3
-			
+			fgets(usn2, maxchar, f2);	
 		}
-		fgets(usn1, maxchar, f1);	//READ NEXT USN'S FROM FILE 1 AND FILE 2
-		fgets(usn2, maxchar, f2);	
 	}
-	
 	if(feof(f2))	//IF FILE 2 BECOMES EMPTY
 	{
 		while(!feof(f1))	//PUT THE REM USN'S OF FILE 1 IN FILE 3
 		{
 			fgets(usn1, maxchar, f1);
-		
 			fprintf(f3,"\n%s\n",usn1);
 		}
 	}
@@ -55,11 +45,8 @@ int main(int argc, char* argv[])
 	{
 			while(!feof(f2))	//PUT USN'S OF FILE 2 IN FILE 3
 		{
-			fgets(usn2, maxchar, f2);
-			
+			fgets(usn2, maxchar, f2);	
 			fprintf(f3,"\n%s\n",usn2);
-			
-			
 		}
 	}
 	

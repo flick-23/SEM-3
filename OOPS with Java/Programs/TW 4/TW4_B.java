@@ -62,7 +62,7 @@ class Cylinder extends Circle{
     }
 }
 public class TW4_B {
-    public static void main(String[] args) {
+    public static void main(String[]args){
         Circle c=new Circle(3.0,"Aqua");
         System.out.println("Radius of circle = "+c.getRadius()+"\nColor of Circle= "+c.getColor());
         c.setColor("Blue");

@@ -16,9 +16,8 @@ class TW9_B{
         //Sorting both the arrays
         Arrays.sort(S1);
         Arrays.sort(S2);
-       
-        System.out.println("S1_modified : "+s1_modified);
-        System.out.println("S2_modified : "+s2_modified);
+        String s1_modified = String.join("",S1);
+        String s2_modified = String.join("",S2);
         if(s1_modified.equals(s2_modified)){
 
             System.out.println("The strings are ANAGRAMS!");

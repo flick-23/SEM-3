@@ -4,7 +4,8 @@
         "array": "c",
         "deque": "c",
         "vector": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "string": "c"
     },
     "python.pythonPath": "/bin/python3"
 }

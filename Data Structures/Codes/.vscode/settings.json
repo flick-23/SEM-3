@@ -1,6 +1,10 @@
 {
     "files.associations": {
-        "cmath": "c"
+        "cmath": "c",
+        "array": "c",
+        "deque": "c",
+        "vector": "c",
+        "string_view": "c"
     },
     "python.pythonPath": "/bin/python3"
 }

@@ -1,36 +1,48 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
-struct stack{
-    int *a;
-    int top;
-    int capacity;
-};
-
-void push(struct stack *s,int x){
-    s->a[++(s->top)]=x;
+typedef struct tree{
+    char data;
+    struct tree *left; 
+    struct tree *right; 
+}*pos;
+pos stack[30];
+int top=-1;
+pos newNode(char data){
+    pos temp = (struct tree*)malloc(sizeof(struct tree));
+    temp->data = data;
+    temp->left = NULL;
+    temp->right=NULL;
+    return temp;
 }
-char pop(struct stack*s){
-    return s->a[(s->top)--];
+void push(pos a){
+    stack[++top] = a;
 }
-int isEmpty(struct stack *s){
-    return s->top==-1;
+pos pop(){
+    pos p;
+    p = stack[top--];
+    return p;
 }
-int isOperand(char x){
-
+void inorder(pos t){
+    if(t==NULL)
+        return;
+    inorder(t->left);
+    printf("%c ",t->data);
+    inorder(t->right);
 }
-char peek(struct stack *s){
-    return s->a
-}
-int infixToPost(char exp[]){
-    struct stack *s=(struct stack*)malloc(sizeof(struct stack));
-    s->top=-1;
-    s->capacity=strlen(exp);
-    s->a=(int*)malloc(s->capacity*sizeof(int*));
-
-}
-
 int main(){
-    
-
+    char exp[30];
+    printf("\nEnter postorder expression : ");
+    scanf("%s",exp);
+    pos temp;
+    int i=0;
+    while(exp[i]!='\0'){
+        temp = newNode(exp[i]);
+        if(exp[i] == '*' || exp[i] == '+' || exp[i] == '-' || exp[i] == '/'){
+            temp->right=pop();
+            temp->left=pop();
+        }
+        push(temp);
+        i++;
+    }
+    inorder(temp);
 }

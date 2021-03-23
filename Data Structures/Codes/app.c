@@ -1,56 +1,36 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#define capacity 10
-struct Queue{
-    char data[capacity][100];
-    int front,rear;
+struct stack{
+    int *a;
+    int top;
+    int capacity;
 };
 
-void send(struct Queue *q,char msg[]){
-    if(q->rear==capacity-1){
-        printf("\nThe message Queue is full");
-        return;
-    }
-    if(q->front==-1)
-        q->front=0;
-    strcpy(q->data[++(q->rear)],msg);
-    printf("\nMessage sent!");
+void push(struct stack *s,int x){
+    s->a[++(s->top)]=x;
 }
-void recieve(struct Queue *q){
-    if(q->front==-1){
-        printf("NO NEW MESSAGES");
-        return;
-    }
-    printf("\nYou have new text message - ");
-    printf("\n%s",q->data[(q->front)++]);
+char pop(struct stack*s){
+    return s->a[(s->top)--];
+}
+int isEmpty(struct stack *s){
+    return s->top==-1;
+}
+int isOperand(char x){
+
+}
+char peek(struct stack *s){
+    return s->a
+}
+int infixToPost(char exp[]){
+    struct stack *s=(struct stack*)malloc(sizeof(struct stack));
+    s->top=-1;
+    s->capacity=strlen(exp);
+    s->a=(int*)malloc(s->capacity*sizeof(int*));
+
 }
 
 int main(){
-    struct Queue q;
-    char msg[100];
-    int flag,choice=0;
-    q.front=-1;
-    q.rear=-1;
-    do{
-        printf("\nSelect your choice \n1.Send\n2.Recieve\n3.EXIT\n");
-        scanf("%d",&choice);
-        switch (choice)
-        {
-        case 1:
-            printf("\nEnter the message : ");
-            scanf("%s",msg);
-            send(&q,msg);
-            break;
-        case 2:
-            printf("\nMessage box - ");
-            recieve(&q);
-            break;
-        case 3:
-        printf("Thank you! Kindly fuck off!");
-        break;
-        default:
-        printf("Invalid choice! Choose again!");
-        }
-    }while(choice!=3);
+    
+
 }
